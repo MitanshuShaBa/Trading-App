@@ -1,2 +1,5 @@
 alpaca_trade_api
 numpy==1.19.3
+fastapi
+uvicorn
+jinja2

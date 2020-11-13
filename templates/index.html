@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <title>Stocks</title>
+{% endblock %}
+    
+    
+{% block content %}
+    <h1>Stock List</h1>
+    <table class="ui selectable striped table">
+        <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %} 
+            <tr>
+                <td>{{stock.symbol}} </td>
+                <td><a href="/stock/{{stock.symbol}}">{{stock.name}}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+   
